@@ -1,0 +1,59 @@
+.reaction-box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.ripple {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: rippleEffect 0.5s ease-out;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+.game-container {
+  text-align: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #282c34;
+  color: white;
+  overflow: hidden;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.reaction-box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  transition: transform 0.1s;
+}
+
+.reaction-box:active {
+  transform: scale(0.8);
+}
